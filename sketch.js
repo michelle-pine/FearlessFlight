@@ -328,7 +328,7 @@ function isGone2(flying) {
 //sets up the canvas, loads all content from the data folder
 function setup() {
   can = createCanvas(600, 800);
-  frameRate(15);
+  frameRate(20);
   if (state == -1 && main) {
     main.play();
   }
@@ -880,9 +880,9 @@ function keyPressed() {
 function keyTyped() {
    if (key === 'b') {
     //brings the user back to menu
-    reset();
+    main.stop();
     main.play();
-    state = 0;
+    reset();
    }
 }
 
@@ -994,8 +994,8 @@ function reset() {
   choseMenu = redMenu;
   endGame = false;
   stopSpawn = false;
-  main.stop();
   loop1.stop();
+  state = 0; 
 
 }
 
