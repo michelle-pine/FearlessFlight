@@ -332,7 +332,7 @@ function setup() {
   if (state == -1 && main) {
     main.play();
   }
-  can.position(200, 0);
+  can.position(0, 0);
 }
 
 
